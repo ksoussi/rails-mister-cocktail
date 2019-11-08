@@ -1,0 +1,51 @@
+.card-category {
+  background-color: transparent;
+  height: 180px;
+  perspective: 1000px;
+}
+
+.card-category-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-category:hover .card-category-inner {
+  transform: rotateY(180deg);
+}
+
+.card-category-front, .card-category-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.card-category-front {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-category-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+  font-size: 25.5vw;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  p {
+    color: black !important
+  }
+}
